@@ -76,7 +76,7 @@ public class RootWindow extends JFrame{
 	NOT not;
 	XOR xor;
 	
-	JButton fuckingButton = new JButton("Get added gates");
+	JButton getGatesButton = new JButton("Get added gates");
 	//JPanel p;
 	JPanel inception;// = new JPanel();W
 	
@@ -85,7 +85,7 @@ public class RootWindow extends JFrame{
 		inception = new JPanel();
 		inception.setSize(getWidth(), getHeight());
 		inception.setBackground(Color.WHITE);
-		inception.add(fuckingButton);
+		inception.add(getGatesButton);
 		add(inception);
 		
 		//inception.setComponentOrientation(ComponentOrientation.LEFT_TO_RIGHT);
@@ -97,7 +97,7 @@ public class RootWindow extends JFrame{
 		setResizable(false);
 		setBackground(Color.WHITE);
 		
-		fuckingButton.addActionListener(new fuckingListener());
+		getGatesButton.addActionListener(new GetGatesListener());
 		
 		//Creating a menubar
 		menuBar = new JMenuBar();
@@ -154,7 +154,7 @@ public class RootWindow extends JFrame{
 		menuItemNOR.addActionListener(new MenuItemNORListener());
 				
 		}
-	private class fuckingListener implements ActionListener{
+	private class GetGatesListener implements ActionListener{
 
 		@Override
 		public void actionPerformed(ActionEvent fucking_e) {
@@ -234,7 +234,7 @@ public class RootWindow extends JFrame{
 			and = new AND(0,0);
 			addedGates.add(and);
 			
-			System.err.println("STORLEK PÅ ARRAY: "+addedGates.size());
+			System.err.println("STORLEK PÃ… ARRAY: "+addedGates.size());
 			
 			System.out.println("Logic AND");
 			//outputList.add(counter, and.getOutput());
